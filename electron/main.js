@@ -3,18 +3,16 @@ const path = require('path');
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 1280,
+    width: 1200,
     height: 800,
     frame: false, // Frameless for custom title bar
     titleBarStyle: 'hidden',
     webPreferences: {
       nodeIntegration: true,
-      contextIsolation: false, // Simplified for this coursework; use preload in production
+      contextIsolation: false,
     }
   });
 
-  // In Dev: Load Vite Server
-  // In Prod: Load built index.html
   const isDev = !app.isPackaged;
   if (isDev) {
     win.loadURL('http://localhost:5173'); 
@@ -24,7 +22,4 @@ function createWindow() {
 }
 
 app.whenReady().then(createWindow);
-
-app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') app.quit();
-});
+app.on('window-all-closed', () => { if (process.platform !== 'darwin') app.quit(); });

@@ -1,37 +1,39 @@
-
-"name": "dw-projeto3",
-"private": true,
-"version": "0.0.0",
-"scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "lint": "eslint .",
-  "preview": "vite preview",
-  "server": "node server/server.js",
-  "electron": "wait-on tcp:5173 && electron .",
-  "start": "concurrently \"npm run server\" \"npm run dev\" \"npm run electron\""
-},
-"dependencies": {
-  "concurrently": "^9.2.1",
-  "cors": "^2.8.5",
-  "dotenv": "^17.2.3",
-  "electron": "^39.2.4",
-  "express": "^5.1.0",
-  "mongoose": "^9.0.0",
-  "react": "^19.2.0",
-  "react-dom": "^19.2.0"
-},
-"devDependencies": {
-  "@eslint/js": "^9.39.1",
-  "@types/react": "^19.2.5",
-  "@types/react-dom": "^19.2.3",
-  "@vitejs/plugin-react": "^5.1.1",
-  "cross-env": "^10.1.0",
-  "eslint": "^9.39.1",
-  "eslint-plugin-react-hooks": "^7.0.1",
-  "eslint-plugin-react-refresh": "^0.4.24",
-  "globals": "^16.5.0",
-  "vite": "^7.2.4",
-  "wait-on": "^9.0.3"
-}
+{
+  "name": "dw-projeto3",
+  "private": true,
+  "version": "0.0.0",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "server": "node server/server.js",
+    "electron": "wait-on tcp:5173 && electron .",
+    "start": "concurrently \"npm run server\" \"npm run dev\" \"npm run electron\""
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "electron": "^33.2.0",
+    "express": "^4.21.1",
+    "mongoose": "^8.8.2",
+    "lucide-react": "^0.460.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "cross-env": "^7.0.3",
+    "eslint": "^9.15.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "globals": "^15.12.0",
+    "vite": "^6.0.1",
+    "wait-on": "^8.0.1"
+  }
 }
